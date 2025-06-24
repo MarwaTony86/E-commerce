@@ -9,7 +9,8 @@ import toast from "react-hot-toast";
 import MainSlider from "../mainSlider/mainSlider";
 import { useQuery } from "@tanstack/react-query";
 import { FaHeart } from "react-icons/fa";
-import { WishlistContext } from "../../context/WishlistContext";
+import { wishListContext } from './../../context/wishListContext';
+
 
 function getProducts() {
   return axios.get("https://ecommerce.routemisr.com/api/v1/products")
@@ -25,7 +26,7 @@ export default function Products() {
   });
 
   const { addProductToCart } = useContext(CartContext); 
-  const { wishlist, toggleWishlist } = useContext(WishlistContext);
+  const { wishlist, toggleWishlist } = useContext(wishListContext);
 
   async function addProductItem(id) {
     let response = await addProductToCart(id);
