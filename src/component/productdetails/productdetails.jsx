@@ -2,15 +2,15 @@
 import { useContext, useEffect, useState } from "react"
  import { useParams } from "react-router-dom"
 import Category from '../category/category';
-import { cartContext } from './../../context/cartContext';
 import toast from "react-hot-toast";
 import  Slider  from 'react-slick';
+import { CartContext } from "../../context/cartContext";
 
 
 
 export default function Productdetails() {
    
-  let { addProductToCart } = useContext(cartContext)
+  let { addProductToCart } = useContext(CartContext)
   
 
    let { id } = useParams()

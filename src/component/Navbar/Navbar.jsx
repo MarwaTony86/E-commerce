@@ -2,8 +2,8 @@ import  { useContext, useEffect } from 'react'
 import img from '../../assets/img/freshcart-logo.svg'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { userContext } from '../../context/userContext';
-import { cartContext } from '../../context/cartContext';
-import { WishlistContext } from '../../context/wishListContext'
+import { WishlistContext } from '../../context/WishlistContext';
+import { CartContext } from '../../context/cartContext';
 
   
   
@@ -11,8 +11,8 @@ import { WishlistContext } from '../../context/wishListContext'
 export default function Navbar() {
 let navigate= useNavigate()
   let { isLogin, setLogin } = useContext(userContext)
-  let { cartNumber, getProductToCart } = useContext(cartContext)
-  const  wishList  = useContext(WishlistContext); 
+  let { cartNumber, getProductToCart } = useContext(CartContext)
+  const  Wishlist  = useContext(WishlistContext); 
 
   function logOut() {
     localStorage.removeItem('userToken'); 

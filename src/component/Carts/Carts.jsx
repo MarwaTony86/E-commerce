@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from 'react'
-import { cartContext } from './../../context/cartContext';
+// import { cartContext } from './../../context/cartContext';
+
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/cartContext';
 
 export default function Carts() {
 
   const [product,setProduct]= useState(null)
-  let {getProductToCart , updateProductInCart, deleteProductInCart }=useContext(cartContext)
+  let {getProductToCart , updateProductInCart, deleteProductInCart }=useContext(CartContext)
 
   async function getProduct() {
     let {data} = await getProductToCart()

@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { cartContext } from "../../context/cartContext";
+import { CartContext } from "../../context/cartContext";
 import toast from "react-hot-toast";
 import { WishlistContext } from "../../context/WishlistContext";
 import { Link } from "react-router-dom";
 
 export default function WishlistPage() {
   const { wishlist, toggleWishlist } = useContext(WishlistContext);
-  const { addProductToCart } = useContext(cartContext);
+  const { addProductToCart } = useContext(CartContext);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -49,7 +49,8 @@ export default function WishlistPage() {
                   <button
                     onClick={() => toggleWishlist(product)}
                     className="text-red-500 hover:text-red-700 transition text-sm"
-                  > Remove
+                  >
+                    Remove
                   </button>
                 </div>
               </div>
