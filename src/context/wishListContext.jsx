@@ -2,7 +2,7 @@
 
 import { createContext, useState } from "react";
 
-export const WishListContext = createContext();
+export const WishlistContext = createContext();
 
 export function WishlistProvider({ children }) {
   const [wishlist, setWishlist] = useState([]);

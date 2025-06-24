@@ -3,6 +3,7 @@ import { CartContext } from "../../context/cartContext";
 import toast from "react-hot-toast";
 import { WishlistContext } from "../../context/wishListContext";
 
+
 import { Link } from "react-router-dom";
 
 export default function WishlistPage() {

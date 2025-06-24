@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 import MainSlider from "../mainSlider/mainSlider";
 import { useQuery } from "@tanstack/react-query";
 import { FaHeart } from "react-icons/fa";
-import { WishListContext } from './../../context/wishListContext';
+import { WishlistContext } from "../../context/wishListContext";
 
 
 function getProducts() {
@@ -26,7 +26,7 @@ export default function Products() {
   });
 
   const { addProductToCart } = useContext(CartContext); 
-  const { wishlist, toggleWishlist } = useContext(WishListContext);
+  const { wishlist, toggleWishlist } = useContext(WishlistContext);
 
   async function addProductItem(id) {
     let response = await addProductToCart(id);
