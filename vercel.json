@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/static/(.*)",
@@ -9,9 +12,5 @@
         }
       ]
     }
-  ],
-
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
